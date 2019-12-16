@@ -1,17 +1,33 @@
 # MimeDetect
-Detects real file formats based on binary analysis. Usage:
 
-C#
+[![NuGet](https://img.shields.io/nuget/dt/Winista.MimeDetect.svg)](https://www.nuget.org/packages/Winista.MimeDetect) 
+[![NuGet](https://img.shields.io/nuget/vpre/Winista.MimeDetect.svg)](https://www.nuget.org/packages/Winista.MimeDetect)
+
+MimeDetect is a library that used to identify MIME content type by analysing the file binary header with optional file extension.
+
+This package is part of nonexisting project Winista.
+
+### Install with nuget
+
 ```
-private static MimeType GetMimeType(string filePath)
-{
-   MimeTypes g_MimeTypes As New MimeTypes();
-   return g_MimeTypes.GetMimeTypeFromFile(filePath);
-}
+Install-Package Winista.MimeDetect
+```
 
-VB.Net
-Private Shared Function GetMimeType(ByVal filePath As String) As MimeType
-   Dim g_MimeTypes As New MimeTypes()
-   Return g_MimeTypes.GetMimeTypeFromFile(filePath)
-End Function
+## Install with .NET CLI
+```
+dotnet add package Winista.MimeDetect
+```
+
+# How to use
+
+```csharp
+   //init
+   var mimeTypes = new MimeTypes();
+   
+   //usage by filepath
+   var mimeType1 = mimeTypes.GetMimeTypeFromFile(filePath);
+   
+   //usage by bytearray
+   var mimeType2 = mimeTypes.GetMimeTypeFromFile(bytes);
+
 ```
