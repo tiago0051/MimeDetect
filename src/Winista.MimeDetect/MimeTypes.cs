@@ -162,6 +162,19 @@ namespace Winista.Mime
 
             return oMimeType;
         }
+
+        public MimeType GetMimeType(byte[] data)
+        {
+            // Preliminary checks
+            if ((data == null) || (data.Length < 1))
+            {
+                return null;
+            }
+            var sData = Array.ConvertAll(data, b => unchecked((sbyte) b));
+
+            return GetMimeType(sData);
+        }
+
         /// <summary> Find the Mime Content Type of a stream from its content.
         /// 
         /// </summary>
