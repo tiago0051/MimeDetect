@@ -17,7 +17,7 @@
     <Company />
     <PackageTags>.netstandard,.netframework,winista,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
