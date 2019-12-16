@@ -142,6 +142,8 @@ namespace Winista.Mime
             MimeType oMimeType = GetMimeType(fileData);
             if (oMimeType != null) return oMimeType;
 
+#if NETFRAMEWORK
+
             //We haven't found the file using Magic (eg a text/plain file)
             //so instead use URLMon to try and get the files format
             Winista.MimeDetect.URLMONMimeDetect.urlmonMimeDetect urlmonMimeDetect = new Winista.MimeDetect.URLMONMimeDetect.urlmonMimeDetect();
@@ -156,6 +158,7 @@ namespace Winista.Mime
                     }
                 }
             }
+#endif
 
             return oMimeType;
         }

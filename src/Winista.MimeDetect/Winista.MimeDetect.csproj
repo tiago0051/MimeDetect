@@ -1,11 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <Authors>Mateusz Przybylek</Authors>
     <Copyright>Copyright (c) Mateusz Przybylek</Copyright>
+    <Description>XXXX</Description>
+    <PackageIconUrl>https://upload.wikimedia.org/wikipedia/commons/e/ed/WINE-logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/GetoXs/MimeDetect.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/GetoXs/MimeDetect</PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\Winista.MimeDetect.snk</AssemblyOriginatorKeyFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.0</Version>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <Compile Remove="URLMONMimeDetect\urlmonMimeDetect.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="mime-types.dtd" />
