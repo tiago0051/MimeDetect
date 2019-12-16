@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <Authors>Mateusz Przybylek</Authors>
+    <Copyright>Copyright (c) Mateusz Przybylek</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="mime-types.dtd" />
+    <None Remove="mime-types.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="mime-types.dtd" />
+    <EmbeddedResource Include="mime-types.xml" />
+  </ItemGroup>
+
+</Project>
