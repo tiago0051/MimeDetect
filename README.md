@@ -3,7 +3,7 @@
 [![NuGet](https://img.shields.io/nuget/dt/Winista.MimeDetect.svg)](https://www.nuget.org/packages/Winista.MimeDetect) 
 [![NuGet](https://img.shields.io/nuget/vpre/Winista.MimeDetect.svg)](https://www.nuget.org/packages/Winista.MimeDetect)
 
-MimeDetect is a library that used to identify MIME content type by analysing the file binary header with optional file extension.
+MimeDetect is a library that used to identify MIME content type by analysing the file binary header with optional file extension. For .NET Framework version package has fallback into urlmon.dll (Windows systems only).
 
 This package is part of nonexisting project Winista.
 
