@@ -17,13 +17,13 @@ namespace Winista.MimeDetect.URLMONMimeDetect
     {
         [DllImport(@"urlmon.dll", CharSet = CharSet.Auto)]
         private extern static System.UInt32 FindMimeFromData(
-            System.UInt32 pBC,
+            IntPtr pBC,
             [MarshalAs(UnmanagedType.LPStr)] System.String pwzUrl,
             [MarshalAs(UnmanagedType.LPArray)] byte[] pBuffer,
             System.UInt32 cbSize,
             [MarshalAs(UnmanagedType.LPStr)] System.String pwzMimeProposed,
             System.UInt32 dwMimeFlags,
-            out System.UInt32 ppwzMimeOut,
+            out IntPtr ppwzMimeOut,
             System.UInt32 dwReserverd
         );
 
@@ -42,9 +42,8 @@ namespace Winista.MimeDetect.URLMONMimeDetect
             }
             try
             {
-                System.UInt32 mimetype;
-                FindMimeFromData(0, null, buffer, 256, null, 0, out mimetype, 0);
-                System.IntPtr mimeTypePtr = new IntPtr(mimetype);
+                IntPtr mimeTypePtr;
+                FindMimeFromData(IntPtr.Zero, null, buffer, 256, null, 0, out mimeTypePtr, 0);
                 string mime = Marshal.PtrToStringUni(mimeTypePtr);
                 Marshal.FreeCoTaskMem(mimeTypePtr);
                 return mime;
