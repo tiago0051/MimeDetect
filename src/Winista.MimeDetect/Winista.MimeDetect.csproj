@@ -8,16 +8,18 @@
     <PackageIconUrl>https://upload.wikimedia.org/wikipedia/commons/e/ed/WINE-logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/GetoXs/MimeDetect.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GetoXs/MimeDetect</PackageProjectUrl>
-    <PackageLicenseUrl></PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\Winista.MimeDetect.snk</AssemblyOriginatorKeyFile>
-    <Company />
     <PackageTags>.netstandard,.netframework,winista,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>1.0.1</Version>
+    <Configurations>Debug;Release;SignAndRelease</Configurations>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)' == 'SignAndRelease'">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\Winista.MimeDetect.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
