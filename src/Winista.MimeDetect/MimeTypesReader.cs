@@ -3,7 +3,7 @@
 //  -------------------------------------------------------------
 //  
 //  -------------------------------------------------------------
-//  Copyright © 2005 Winista - All Rights Reserved
+//  Copyright (C) 2005 Winista - All Rights Reserved
 // ***************************************************************
 // 
 // ***************************************************************
@@ -37,10 +37,10 @@ namespace Winista.Mime
 		{
 			MimeType[] types = null;
 			//System.Xml.XmlDocument document = new System.Xml.XmlDocument();
-            //document.Load(filepath);
+			//document.Load(filepath);
 
-            //JT: Read the MimeType Mapping file from the assembly to protect users hacking the mime-types.xml file
-            System.Xml.XmlDocument document = GetEmbeddedXml(GetType(), "mime-types.xml");
+			//JT: Read the MimeType Mapping file from the assembly to protect users hacking the mime-types.xml file
+			System.Xml.XmlDocument document = GetEmbeddedXml(GetType(), "mime-types.xml");
 
 			types = Visit(document);
 			return types;
@@ -48,49 +48,49 @@ namespace Winista.Mime
 		}
 
 
-        public static XmlDocument GetEmbeddedXml(Type type, string fileName)
-        {
-            Stream str = GetEmbeddedFile(type, fileName);
-            XmlTextReader tr = new XmlTextReader(str);
-            XmlDocument xml = new XmlDocument();
-            xml.Load(tr);
-            return xml;
-        }
+		public static XmlDocument GetEmbeddedXml(Type type, string fileName)
+		{
+			Stream str = GetEmbeddedFile(type, fileName);
+			XmlTextReader tr = new XmlTextReader(str);
+			XmlDocument xml = new XmlDocument();
+			xml.Load(tr);
+			return xml;
+		}
 
-        public static Stream GetEmbeddedFile(Assembly assembly, string fileName)
-        {
-            string assemblyName = assembly.GetName().Name;
-            return GetEmbeddedFile(assemblyName, fileName);
-        }
+		public static Stream GetEmbeddedFile(Assembly assembly, string fileName)
+		{
+			string assemblyName = assembly.GetName().Name;
+			return GetEmbeddedFile(assemblyName, fileName);
+		}
 
-        public static Stream GetEmbeddedFile(Type type, string fileName)
-        {
-            string assemblyName = type.Assembly.GetName().Name;
-            return GetEmbeddedFile(assemblyName, fileName);
-        }
+		public static Stream GetEmbeddedFile(Type type, string fileName)
+		{
+			string assemblyName = type.Assembly.GetName().Name;
+			return GetEmbeddedFile(assemblyName, fileName);
+		}
 
-        /// <summary>
-        /// Extracts an embedded file out of a given assembly.
-        /// </summary>
-        /// <param name="assemblyName">The namespace of you assembly.</param>
-        /// <param name="fileName">The name of the file to extract.</param>
-        /// <returns>A stream containing the file data.</returns>
-        public static Stream GetEmbeddedFile(string assemblyName, string fileName)
-        {
-            try
-            {
-                System.Reflection.Assembly a = System.Reflection.Assembly.Load(assemblyName);
-                Stream str = a.GetManifestResourceStream(assemblyName + "." + fileName);
+		/// <summary>
+		/// Extracts an embedded file out of a given assembly.
+		/// </summary>
+		/// <param name="assemblyName">The namespace of you assembly.</param>
+		/// <param name="fileName">The name of the file to extract.</param>
+		/// <returns>A stream containing the file data.</returns>
+		public static Stream GetEmbeddedFile(string assemblyName, string fileName)
+		{
+			try
+			{
+				System.Reflection.Assembly a = System.Reflection.Assembly.Load(assemblyName);
+				Stream str = a.GetManifestResourceStream(assemblyName + "." + fileName);
 
-                if (str == null)
-                    throw new Exception("Could not locate embedded resource '" + fileName + "' in assembly '" + assemblyName + "'");
-                return str;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(assemblyName + ": " + e.Message);
-            }
-        }
+				if (str == null)
+					throw new Exception("Could not locate embedded resource '" + fileName + "' in assembly '" + assemblyName + "'");
+				return str;
+			}
+			catch (Exception e)
+			{
+				throw new Exception(assemblyName + ": " + e.Message);
+			}
+		}
 
 		/// <summary>Scan through the document. </summary>
 		private MimeType[] Visit(System.Xml.XmlDocument document)
@@ -124,7 +124,7 @@ namespace Winista.Mime
 					}
 				}
 			}
-            return (MimeType[])SupportUtil.ToArray(types, new MimeType[types.Count]);
+			return (MimeType[])SupportUtil.ToArray(types, new MimeType[types.Count]);
 		}
 
 		/// <summary>Read Element named mime-type. </summary>
@@ -153,7 +153,7 @@ namespace Winista.Mime
 			
 			try
 			{
-                //System.Diagnostics.Trace.WriteLine("Mime type:" + name);
+				//System.Diagnostics.Trace.WriteLine("Mime type:" + name);
 				type = new MimeType(name);
 			}
 			catch (MimeTypeException mte)
@@ -217,10 +217,10 @@ namespace Winista.Mime
 				else if (attr.Name.Equals("type"))
 				{
 					type = attr.Value;
-                    if (String.Compare(type, "byte", true) == 0)
-                    {
-                        type = "System.Byte";
-                    }
+					if (String.Compare(type, "byte", true) == 0)
+					{
+						type = "System.Byte";
+					}
 				}
 				else if (attr.Name.Equals("value"))
 				{
