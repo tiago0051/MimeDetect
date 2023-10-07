@@ -5,7 +5,6 @@
     <Authors>Mateusz Przybylek</Authors>
     <Copyright>Copyright (c) Mateusz Przybylek</Copyright>
     <Description>MimeDetect is a library that used to identify MIME content type by analysing the file binary header with optional file extension.</Description>
-    <PackageIconUrl>https://upload.wikimedia.org/wikipedia/commons/e/ed/WINE-logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/GetoXs/MimeDetect.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GetoXs/MimeDetect</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
@@ -13,6 +12,8 @@
     <PackageTags>.netstandard,.netframework,winista,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>1.1.0</Version>
+    <PackageIcon>logo.png</PackageIcon>
+    <DebugType>embedded</DebugType>
     <Configurations>Debug;Release;SignAndRelease</Configurations>
   </PropertyGroup>
   
@@ -31,6 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Remove="mime-types.dtd" />
     <None Remove="mime-types.xml" />
   </ItemGroup>
