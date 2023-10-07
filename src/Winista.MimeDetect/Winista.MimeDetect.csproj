@@ -12,7 +12,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>.netstandard,.netframework,winista,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Configurations>Debug;Release;SignAndRelease</Configurations>
   </PropertyGroup>
   
