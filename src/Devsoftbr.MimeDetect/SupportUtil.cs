@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Winista.Mime
+namespace Devsoftbr.Mime
 {
     public class SupportUtil
     {

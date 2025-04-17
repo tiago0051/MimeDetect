@@ -9,19 +9,20 @@
     <RepositoryUrl>https://github.com/tiago0051/MimeDetect</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GetoXs/MimeDetect</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageTags>.netstandard,.netframework,winista,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
+    <PackageTags>.netstandard,.netframework,Devsoftbr,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <DebugType>embedded</DebugType>
     <Configurations>Debug;Release;SignAndRelease</Configurations>
-    <Version>1.1.6</Version>
+    <Version>1.1.7</Version>
     <Company>DevsoftBR</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)' == 'SignAndRelease'">
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\..\Winista.MimeDetect.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\..\Devsoftbr.MimeDetect.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

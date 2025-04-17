@@ -3,7 +3,7 @@
 //  -------------------------------------------------------------
 //  
 //  -------------------------------------------------------------
-//  Copyright (C) 2005 - Winista, All Rights Reserved
+//  Copyright (C) 2005 - Devsoftbr, All Rights Reserved
 // ***************************************************************
 // 
 // ***************************************************************
@@ -11,13 +11,13 @@
 /// <summary>
 /// Created By: Jeremy Thompson
 /// Created Date: 15/03/2010
-/// Description: Detect file format - I combined Winista's MimeDetect with URLMon
+/// Description: Detect file format - I combined Devsoftbr's MimeDetect with URLMon
 /// </summary>
 /// <remarks></remarks>
 using System;
 using System.Collections;
 
-namespace Winista.Mime
+namespace Devsoftbr.Mime
 {
 	/// <summary>
     /// Defines a Mime Content Type

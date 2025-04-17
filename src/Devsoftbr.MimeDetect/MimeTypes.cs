@@ -3,7 +3,7 @@
 //  -------------------------------------------------------------
 //  
 //  -------------------------------------------------------------
-//  Copyright (C) 2005 - Winista All Rights Reserved
+//  Copyright (C) 2005 - Devsoftbr All Rights Reserved
 // ***************************************************************
 // 
 // ***************************************************************
@@ -11,14 +11,14 @@
 /// <summary>
 /// Created By: Jeremy Thompson
 /// Created Date: 15/03/2010
-/// Description: Detect file format - I combined Winista's MimeDetect with URLMon
+/// Description: Detect file format - I combined Devsoftbr's MimeDetect with URLMon
 /// </summary>
 /// <remarks></remarks>
 /// 
 using System;
 using System.IO;
 
-namespace Winista.Mime
+namespace Devsoftbr.Mime
 {
     /// <summary>
     /// Summary description for MimeTypes.
@@ -136,7 +136,7 @@ namespace Winista.Mime
             {
                 byte[] data = new byte[srcFile.Length];
                 srcFile.Read(data, 0, (Int32)srcFile.Length);
-                fileData = Winista.Mime.SupportUtil.ToSByteArray(data);
+                fileData = Devsoftbr.Mime.SupportUtil.ToSByteArray(data);
             }
 
             MimeType oMimeType = GetMimeType(fileData);
