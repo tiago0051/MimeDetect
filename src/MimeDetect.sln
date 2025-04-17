@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Winista.MimeDetect", "Winista.MimeDetect\Winista.MimeDetect.csproj", "{DDB2296C-8B7C-4537-BF42-480E7BA0DAE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devsoftbr.MimeDetect", "Devsoftbr.MimeDetect\Devsoftbr.MimeDetect.csproj", "{DDB2296C-8B7C-4537-BF42-480E7BA0DAE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

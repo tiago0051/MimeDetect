@@ -11,7 +11,7 @@ using System.IO;
 /// </summary>
 /// <remarks></remarks>
 
-namespace Winista.MimeDetect.URLMONMimeDetect
+namespace Devsoftbr.MimeDetect.URLMONMimeDetect
 {
     public class urlmonMimeDetect
     {

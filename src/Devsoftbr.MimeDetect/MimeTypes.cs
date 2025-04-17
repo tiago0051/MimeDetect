@@ -146,7 +146,7 @@ namespace Winista.Mime
 
             //We haven't found the file using Magic (eg a text/plain file)
             //so instead use URLMon to try and get the files format
-            Winista.MimeDetect.URLMONMimeDetect.urlmonMimeDetect urlmonMimeDetect = new Winista.MimeDetect.URLMONMimeDetect.urlmonMimeDetect();
+            Devsoftbr.MimeDetect.URLMONMimeDetect.urlmonMimeDetect urlmonMimeDetect = new Devsoftbr.MimeDetect.URLMONMimeDetect.urlmonMimeDetect();
             string urlmonMimeType = urlmonMimeDetect.GetMimeFromFile(filePath);
             if (!string.IsNullOrEmpty(urlmonMimeType))
             {

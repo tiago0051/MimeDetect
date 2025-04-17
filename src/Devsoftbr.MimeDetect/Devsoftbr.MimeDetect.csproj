@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
-    <Authors>Mateusz Przybylek</Authors>
-    <Copyright>Copyright (c) Mateusz Przybylek</Copyright>
+    <Authors>Tiago Salgado</Authors>
+    <Copyright>Copyright (c) Tiago Salgado</Copyright>
     <Description>MimeDetect is a library that used to identify MIME content type by analysing the file binary header with optional file extension.</Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/GetoXs/MimeDetect.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/tiago0051/MimeDetect</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GetoXs/MimeDetect</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>.netstandard,.netframework,winista,mime,binary,analysis,detection,content,type,urlmon,urlmon.dll</PackageTags>
@@ -15,7 +15,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <DebugType>embedded</DebugType>
     <Configurations>Debug;Release;SignAndRelease</Configurations>
-    <Version>1.1.0</Version>
+    <Version>1.1.6</Version>
+    <Company>DevsoftBR</Company>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)' == 'SignAndRelease'">
